@@ -1,0 +1,8 @@
+torch
+torchvision
+pytest
+numpy
+torchsummary
+gradio
+transformers
+tiktoken
