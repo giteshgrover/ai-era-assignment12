@@ -13,7 +13,8 @@ def generate_sequence(text):
     device = get_device()
     # Load model
     model = DecoderTransformer(config)
-    model.load_state_dict(torch.load(config.saved_model_path, weights_only=True))
+    # model.load_state_dict(torch.load(config.saved_model_path, weights_only=True))
+    model.load_state_dict(torch.load(config.saved_model_path, map_location=torch.device("cpu")))
     model.to(device)
     model.eval()
 
